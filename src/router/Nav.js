@@ -6,11 +6,12 @@ import {
 export default class Nav extends React.Component{
  render(){
      return(
-         <div>
+         <div className={"tabar"}>
              {
                  router.map((v,i)=>{
                      return(
-                         <NavLink key={i} exact={v.exact} to={v.to}>{v.context}</NavLink>
+                        <NavLink className={"navStyle"} key={i} exact={v.exact} to={v.to} activeStyle={{color:"orange"}}><i className={v.className}
+                          style={{fontSize:"80px"}} ></i>{v.context}</NavLink>
                      )
                  })
              }

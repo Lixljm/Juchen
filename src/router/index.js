@@ -9,6 +9,7 @@ export default [
         exact: true,
         context: "首页",
         component: Home,
+        className:"iconfont iconshouye",
         meta: {
             title: "",
             Keywored: "",
@@ -20,6 +21,7 @@ export default [
         to: "/theatre",
         context: "剧院",
         component: Theatre,
+        className:"iconfont icontheater",
         meta: {
             title: "",
             Keywored: "",
@@ -31,6 +33,7 @@ export default [
         to:"/ticket",
         context:"卡包",
         component:Ticket,
+        className:"iconfont iconyouhui",
         meta:{
             title:"",
             Keywored:"",
@@ -41,6 +44,7 @@ export default [
     to: "/user",
     context: "我的",
     component: User,
+    className: "iconfont iconwode",
     meta: {
         title: "",
         Keywored: "",

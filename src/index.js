@@ -7,15 +7,13 @@ import axios  from "axios"
 import {
     Provider
 } from "react-redux";
+import 'lib-flexible'
 import config from "./common/config,js"
 import  store from "./store"
 
 // 请求头拦截
  React.Component.prototype.config = config;
-  axios.interceptors.request.use(config=>{
-      config.url = "/jucheng/"+config.url;
-      return config
-  })
+
 
 // 响应结果拦截
   axios.interceptors.response.use(({data})=>{

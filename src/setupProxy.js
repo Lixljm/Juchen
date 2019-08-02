@@ -4,7 +4,14 @@ module.exports = function(app){
          target:"https://m.juooo.com",
          changeOrigin:true,
          pathRewrite:{
-             "/^jucheng":""
+             "^/jucheng":""
          }
-     }))
+     }));
+    app.use("/juchengapi",proxy({
+        target:"https://api.juooo.com",
+        changeOrigin:true,
+        pathRewrite:{
+            "^/juchengapi":""
+        }
+    }))
 }

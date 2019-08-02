@@ -12,20 +12,16 @@ import {
 } from "react-router-dom"
 import GraudRoute from "./router/GraudRoute"
 import Nav from "./router/Nav"
+import "lib-flexible"
+import Navlist from "./common/table"
+
 
 export default class App extends React.Component{
   render(){
       return (
           <div className="App">
               <Router>
-                <Nav></Nav>
-              {
-                 router.map((v,i)=>{
-                     return(
-                         <Route key={i} path={v.path} exact={v.exact} render={()=><GraudRoute {...v}/>}></Route>
-                  )
-              })
-              }
+                    <Navlist></Navlist>
               </Router>
           </div>
       )

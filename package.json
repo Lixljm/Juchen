@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
+    "lib": "^4.0.4",
     "lib-flexible": "^0.3.2",
     "postcss-px2rem": "^0.3.0",
     "react": "^16.8.6",

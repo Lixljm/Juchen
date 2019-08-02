@@ -49,6 +49,6 @@ export default [
         title: "",
         Keywored: "",
         description: "描述",
-    }
+    },
 }
 ]

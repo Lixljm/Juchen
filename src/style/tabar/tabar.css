@@ -1,0 +1,13 @@
+.tabar{
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    color:black;
+}
+.navStyle{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}

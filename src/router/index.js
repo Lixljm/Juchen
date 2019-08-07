@@ -38,7 +38,13 @@ export default [
             title:"",
             Keywored:"",
             description:"描述",
-        }
+        },
+        children:[
+            {
+                path:"/ticket/:id",
+                to:"/ticket/"
+            }
+        ]
     }, {
     path: "/user",
     to: "/user",

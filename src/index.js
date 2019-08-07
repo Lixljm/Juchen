@@ -7,7 +7,7 @@ import axios  from "axios"
 import {
     Provider
 } from "react-redux";
-import 'lib-flexible'
+import "lib-flexible"
 import config from "./common/config,js"
 import  store from "./store"
 

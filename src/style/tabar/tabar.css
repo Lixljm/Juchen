@@ -1,11 +1,14 @@
 .tabar{
     position: fixed;
-    bottom: 10px;
+    bottom: 0px;
     width: 100%;
     display: flex;
     justify-content:space-around;
     color:black;
+     background: white;
+    z-index: 99999999;
 }
+
 .navStyle{
     display: flex;
     flex-direction: column;

@@ -14,6 +14,7 @@ import GraudRoute from "./router/GraudRoute"
 import Nav from "./router/Nav"
 import "lib-flexible"
 import Navlist from "./common/table"
+import "./style/common.scss"
 
 
 export default class App extends React.Component{

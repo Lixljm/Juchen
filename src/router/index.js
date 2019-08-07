@@ -10,6 +10,7 @@ export default [
         context: "首页",
         component: Home,
         className:"iconfont iconshouye",
+        isFile:true,
         meta: {
             title: "",
             Keywored: "",
@@ -22,6 +23,7 @@ export default [
         context: "剧院",
         component: Theatre,
         className:"iconfont icontheater",
+        isFile:true,
         meta: {
             title: "",
             Keywored: "",
@@ -33,6 +35,7 @@ export default [
         to:"/ticket",
         context:"卡包",
         component:Ticket,
+        isFile:true,
         className:"iconfont iconyouhui",
         meta:{
             title:"",
@@ -45,6 +48,7 @@ export default [
     context: "我的",
     component: User,
     className: "iconfont iconwode",
+        isFile:true,
     meta: {
         title: "",
         Keywored: "",

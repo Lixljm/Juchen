@@ -1,0 +1,6 @@
+export default {
+    GET_PIC:"GET_PIC",
+    GET_HOTSHOW:"GET_HOTSHOW",
+    GET_LIST : "GET_LIST",
+    GET_LODINGLIST:"GET_LODINGLIST"
+}

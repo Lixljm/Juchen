@@ -2,5 +2,10 @@ export default{
     operation_list:[],
     tourshowList:[],
     membershipList:[],
-    hotvenueList:[]
+    hotvenueList:[],
+    picLIsr:[],
+    hotshow:{},
+    hotlists:[],
+    listtype:[],
+    loginglist:[],
 }

@@ -1,0 +1,39 @@
+ .lb2{
+   height:220px;
+   padding: 20px;
+   .title{
+     text-align: left;
+   }
+ }
+ .hostType{
+   display: flex;
+   flex-wrap: nowrap;
+ }
+.wenben{
+  text-align: right;
+  width: 115px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+ .hotlist{
+   height:161px;
+   width:118px;
+    margin:0 5px;
+   .wenben{
+     width:120px;
+     flex-shrink: 0;
+     font-size: 12px;
+   }
+   img{
+     width:115px;
+     height: 140px;
+   }
+ }
+ .hotlist{
+   margin-top: 20px;
+ }
+ .hotlist:first-child{
+   margin-left:0px!important;
+
+ }

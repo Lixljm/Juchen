@@ -10,8 +10,8 @@ export default class Nav extends React.Component{
              {
                  router.map((v,i)=>{
                      return(
-                        <NavLink className={"navStyle"} key={i} exact={v.exact} to={v.to} activeStyle={{color:"orange"}}><i className={v.className}
-                          style={{fontSize:"80px"}} ></i>{v.context}</NavLink>
+                        v.isShow?<NavLink className={"navStyle"} key={i} exact={v.exact} to={v.to} activeStyle={{color:"orange"}}><i className={v.className}
+                          style={{fontSize:"40px"}} ></i>{v.context}</NavLink>:null
                      )
                  })
              }

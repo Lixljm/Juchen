@@ -5,9 +5,11 @@ import home from "./home"
 import theatre from "./theatre"
 import ticket from "./ticket"
 import user from "./user"
+import search from "./search"
 export default combineReducers(({
     home,
     theatre,
     ticket,
-    user
+    user,
+    search
 }))

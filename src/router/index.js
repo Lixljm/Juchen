@@ -1,8 +1,10 @@
-import Home from "../view/home"
+﻿import Home from "../view/home"
 import Theatre from "../view/theatre"
 import Ticket from "../view/ticket"
 import User from "../view/user"
 import Search from "../view/search"
+import TheatreList  from "../view/theatre/theaterList"
+import ShowList from "../view/theatre/showList"
 export default [
     {
         path: "/",
@@ -18,18 +20,34 @@ export default [
             description: "描述",
         }
     },
-    {
+     {
         path: "/theatre",
         to: "/theatre",
         context: "剧院",
         component: Theatre,
-        className:"iconfont icontheater",
         isShow:true,
-        meta: {
-            title: "",
-            Keywored: "",
-            description: "描述",
-        }
+        className:"iconfont icontheater",
+        children:[{
+             path: "/theatre/",
+             to: "/theatre/",
+             exact:true,
+             context: "剧院",
+             component: TheatreList,
+             
+             meta: {
+                 title: "",
+                 Keywored: "",
+                 description: "描述",
+         }
+         },
+         {
+             path:"/theatre/showList/:tid",
+             to:"/theatre/showList",
+             context:"演出信息",
+             component:ShowList,
+         }
+
+      ]
     },
     {
         path:"/ticket",

@@ -6,7 +6,7 @@ export  default class GraudRoute extends React.Component{
     render(){
         return(
             <div>
-                <this.props.component/>
+                <this.props.component {...this.props}/>
             </div>
         )
     }

@@ -1,4 +1,5 @@
 import React from "react"
+
 import "../../style/home/index.scss"
 import { 
     Link

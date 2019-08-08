@@ -1,10 +1,21 @@
-import React from "react"
+import React from "react";
+import {
+    Route
+} from "react-router-dom"
+
 export default class Theatre extends React.Component{
     render(){
-        return(
+        return (
             <div>
-                剧院
+                {
+                    this.props.children.map((v,i)=>{
+                        return (
+                            <Route key={i} {...v}></Route>
+                        )
+                    })
+                }
             </div>
         )
+
     }
 }

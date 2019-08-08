@@ -10,6 +10,16 @@ import homeType from "../../actionType/home"
          state.membershipList = payload
      }else if(type === homeType.APP_HOTVENUE){
          state.hotvenueList = payload
-     }
+     }else if(type === homeType.GET_HOTSHOW){
+        state.hotshow = payload;
+        state.hotlists = payload.hots_show_list
+        console.log(payload)
+    }else if(type === homeType.GET_LIST){
+        state.listtype = payload;
+    }else if(type === homeType.GET_LODINGLIST){
+        state.loginglist = payload;
+    }else if(type === homeType.GET_PIC){
+        state.picLIsr=payload;
+    }
      return  state
  }

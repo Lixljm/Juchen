@@ -21,7 +21,6 @@ export default class Table extends React.Component{
                              )
                          })
                      }
-                     <Navlist></Navlist>
                  </Router>
              </div>
         )

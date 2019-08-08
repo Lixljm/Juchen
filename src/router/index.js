@@ -12,6 +12,7 @@ export default [
         component: Home,
         className:"iconfont iconshouye",
         isShow:true,
+        isok:true,
         meta: {
             title: "",
             Keywored: "",
@@ -25,6 +26,7 @@ export default [
         component: Theatre,
         className:"iconfont icontheater",
         isShow:true,
+        isok:true,
         meta: {
             title: "",
             Keywored: "",
@@ -50,6 +52,7 @@ export default [
     component: User,
     className: "iconfont iconwode",
     isShow:true,
+    isok:true,
     meta: {
         title: "",
         Keywored: "",
@@ -60,7 +63,6 @@ export default [
     to: "/search",
     context: "搜索",
     component: Search,
-    className: "iconfont iconwode",
     meta: {
         title: "",
         Keywored: "",

@@ -2,7 +2,7 @@ import React from "react"
 import axios from "axios"
 import 'swiper/dist/css/swiper.min.css'
 import Swiper from "swiper"
-import {logicalExpression} from "@babel/types";
+// import {logicalExpression} from "@babel/types";
 
 export default class ticket extends React.Component {
     constructor() {

@@ -1,0 +1,549 @@
+
+/********************************* 我的部分 *********************************/
+*{
+  margin: 0;
+  padding: 0;
+}
+.Box{
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+/******Btop*******/
+.Btop{
+  width: 100%;
+  height: 4.88rem;
+  background: url("../../image/bj.jpg") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  margin: 0 auto;
+}
+.Btop>i{
+  color: #ffffff;
+  font-size: 0.6rem;
+  height: 0.36rem;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.wwwhite{
+  width: 9.1rem;
+  height: 120px;
+}
+.Top{
+  width: 9.1rem;
+  height: 3.8rem;
+  background: #ffffff;
+  border-radius: 10px 10px 10px 10px;
+  margin: 0 auto;
+}
+.t1{
+  width: 9.1rem;
+  height: 1.9rem;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+
+}
+.bao{
+  padding-top: 0.28rem;
+  position: absolute;
+  left: 2.12rem;
+}
+.p1{
+  font-weight: bold;
+  font-size: 0.4rem;
+  float: left;
+  padding-bottom: 15px;
+}
+.p2{
+  font-size: 0.28rem;
+  float: left;
+}
+.hp{
+  width: 1.48rem;
+  height: 1.48rem;
+  background: #999999;
+  border-radius: 1.48rem;
+  position: absolute;
+  top: -0.39rem;
+  left: 0.4rem;
+}
+
+.VIP{
+  width: 100%;
+  height: 32px;
+}
+.V6{
+  width: 102px;
+  height: 32px;
+  background: #f6dda2;
+  float: right;
+  border-radius:30px 0 0 30px;
+}
+.V6>p{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+}
+.t3{
+  width: 100%;
+  height: 122px;
+  display: flex;
+}
+.t3 a{
+  padding-top: 12px;
+  flex: 1;
+  float: left;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #999999;
+}
+.tt{
+  color: red;
+  font-size: 40px;
+}
+.td{
+  padding-top: 5px;
+  color: #666666;
+  font-size: 14px;
+}
+/****************/
+
+/******Bbottom*******/
+.Bbottom{
+  width: 9.1rem;
+  height: 100%;
+  margin: 0 auto;
+  /*background: purple;*/
+}
+.Bbottom a{
+  color: #232323;
+}
+
+.vip{
+  margin-top: 55px;
+  width: 9.1rem;
+  height: 2.8rem;
+  background: #231a0a;
+  border-radius: 15px;
+  /*background: url("../../image/VIP.jpg") no-repeat;*/
+  /*background-size: 100% 100%;*/
+}
+.vip>img{
+  width: 100%;
+  height:100%;
+}
+.dww{
+  margin-top: 30px;
+  width: 9.1rem;
+  height: 2.8rem;
+  border-radius: 15px;
+  background: #ffffff;
+}
+.dww ul li {
+  float: left;
+  margin-left: 10px;
+}
+.dww{
+  font-size: 12px;
+}
+.icon i{
+  display: block;
+  font-size: 55px;
+}
+.dww li{
+  padding-left: 70px;
+  margin-top: 55px;
+}
+
+
+.ssyk{
+  margin-top: 30px;
+  width: 9.1rem;
+  height: 2.8rem;
+  border-radius: 15px;
+  background: #ffffff;
+  font-size: 12px;
+  display: flex;
+  margin-bottom: 280px;
+}
+.ssyk ul li{
+  float: left;
+  flex: 1;
+  margin-left: 70px;
+  margin-top: 55px;
+}
+/***************************************************************************/
+
+/********************************** details ********************************/
+.details {
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+}
+
+header {
+  width: 100%;
+  height: 440px;
+  position: relative;
+}
+
+.bj {
+  width: 100%;
+  height: 450px;
+  background: url("../../image/bj (2).jpg") no-repeat;
+}
+
+.bj > img {
+  width: 100%;
+  height: 440px;
+}
+
+.One {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  z-index: 1;
+}
+
+.One p {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 100px;
+  float: left;
+  color: #ffffff;
+  flex: 2;
+}
+
+.One span {
+  display: block;
+  font-weight: 700;
+  float: left;
+  font-size: 43px;
+  line-height: 100px;
+  color: #ffffff;
+  flex: 0.5;
+}
+
+.One i {
+  font-weight: 700;
+  flex: 0.5;
+  color: #ffffff;
+  display: block;
+  float: left;
+  font-size: 43px;
+  line-height: 100px;
+}
+
+.book {
+  width: 240px;
+  height: 310px;
+  margin-left: 30px;
+  margin-top: 10px;
+  float: left;
+}
+
+.book > img {
+  width: 240px;
+  height: 310px;
+}
+
+.bookName {
+  width: 390px;
+  height: 310px;
+  float: left;
+  margin: 30px;
+}
+
+.name {
+  width: 100%;
+  height: 160px;
+  font-size: 32px;
+  color: #fefefefe;
+  font-weight: bold;
+}
+
+.white {
+  width: 100%;
+  height: 50px;
+}
+
+.price {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  font-size: 32px;
+  color: #fefefefe;
+  font-weight: bold;
+}
+
+.Data {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+
+.Day {
+  width: 100%;
+  height: 200px;
+  display: flex;
+}
+
+.time {
+  flex: 2;
+}
+
+.time_child1 {
+  width: 100%;
+  height: 105px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 130px;
+  float: left;
+}
+
+.time_child2 {
+  margin-left: 45px;
+  float: left;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 80px;
+}
+
+.position {
+  flex: 1;
+  position: relative;
+}
+
+.circular {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  position: absolute;
+  top: 50px;
+  left: 75px;
+  background: #ededed;
+}
+
+.icondingwei {
+  font-size: 70px;
+  color: #ff5149;
+  line-height: 100px;
+}
+
+.discount {
+  width: 88%;
+  height: 100px;
+  margin: auto;
+  border-radius: 10px;
+  background: linear-gradient(-50deg, #ff9a34, #ff4d4a);
+  margin-bottom: 30px;
+  display: flex;
+}
+.discount div{
+  /*flex: 1;*/
+  line-height: 100px;
+}
+.zz{
+  width: 50px;
+  height: 50px;;
+  background: url("../../image/zvip.jpg") no-repeat;
+  background-size: 100% 100%;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+.zx{
+  font-size: 30px;
+  color: #ffffff;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+.zg{
+  font-size: 30px;
+  color: #ffffff;
+}
+.kt{
+  color: #ffffff;
+  margin-left: 60px;
+}
+.discount>i{
+  margin-top: 30px;
+  margin-right: 15px;
+}
+
+.middle {
+  width: 100%;
+  height: 350px;
+  margin-top: 30px;
+  background: #ffffff;
+  margin-bottom: 30px;
+}
+
+.support {
+  width: 100%;
+  height: 109px;
+}
+
+.support > p {
+  float: left;
+  line-height: 109px;
+  font-size: 25px;
+}
+
+.support > a {
+  float: left;
+  line-height: 109px;
+  margin-left: 15px;
+  font-size: 25px;
+  color: #ff6743;
+}
+
+.support > i {
+  line-height: 109px;
+  float: left;
+  margin-left: 100px;
+  font-size: 40px;
+}
+
+.tips {
+  width: 100%;
+  height: 130px;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+}
+
+.sp1 {
+  color: #999999;
+  font-size: 30px;
+  line-height: 130px;
+  margin-left: 30px;
+  float: left;
+}
+.sp2{
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.ttt {
+  width: 100%;
+  height: 109px;
+}
+
+.sp3 {
+  color: #999999;
+  font-size: 30px;
+  line-height: 109px;
+  float: left;
+  margin-left: 30px;
+}
+.sp4{
+  line-height: 109px;
+}
+.sp4 span{
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.Tour{
+  /*margin-bottom: 30px;*/
+  width: 100%;
+  height: 260px;
+  margin-top: 30px;
+  background: #ffffff;
+}
+.tour_city{
+  width: 100%;
+  height: 110px;
+}
+.tour_city p{
+  font-size: 32px;
+  font-weight: bold;
+  float: left;
+  line-height: 110px;
+  margin-left: 25px;
+}
+.tour_city span{
+  float: left;
+  line-height: 110px;
+  margin-left: 235px;
+}
+.tour_city i{
+  float: left;
+  line-height: 110px;
+}
+.tour_city_list{
+  width: 100%;
+  height: 150px;
+  background: #eaffea;
+}
+.city{
+  width: 190px;
+  height: 100px;
+  border-radius: 20px;
+  margin: 25px;
+  background: #ffffff;
+}
+.cy1{
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 60px;
+}
+.append-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+.append-buttons a {
+  display: inline-block;
+  border: 1px solid #007aff;
+  color: #007aff;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+
+
+.wwhite{
+  width: 100%;
+  height: 10px;
+  background: #f5f5f5;
+}
+.introduce{
+  width: 100%;
+  height: 350px;
+  background: #ffffff;
+}
+.subtitle{
+  width: 80%;
+  height: 50px;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 25px;
+}
+.Scontent{
+  width: 100%;
+  font-size: 28px;
+}
+
+.recommend{
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+}
+.word{
+  width: 80%;
+  height: 110px;
+  font-size: 32px;
+  font-weight: bold;
+  float: left;
+  line-height: 110px;
+  margin-left: 25px;
+}
+.commond div {
+  color: #000;
+}
+/***************************************************************************/

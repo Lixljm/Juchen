@@ -5,6 +5,7 @@ import {
     Route,
     withRouter
 } from "react-router-dom"
+import "../../style/ticket/index.scss"
 
 
  class User extends React.Component{

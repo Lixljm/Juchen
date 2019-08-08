@@ -1,0 +1,28 @@
+.loding{
+   display: flex;
+  padding:0 20px;
+  .lodingList{
+    font-size: 12px;
+    width:243px;
+    height:167px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 25px;
+    margin-bottom:30px;
+    h4{
+      width: 200px;
+    height:45px;
+      font-weight: 900;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      font-size: 17px;
+    }
+  }
+   img{
+     width:121px;
+     height: 165px;
+   }
+}

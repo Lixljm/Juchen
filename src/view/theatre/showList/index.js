@@ -29,20 +29,20 @@ class ShowList extends React.Component{
         //console.log(this.props,888888);
         return(
             <div className="f2">
-             <header className="search-top border-bt ">
+             <div className="search-top border-bt ">
                  <div className="search-nav theater-search-nav swiper-container" >
                      <div className="search_nav_wrap js-search-nav swiper-wrapper">
                          <div className="search_nav_item active swiper-slide "onClick={()=>{this.props.getShowList(this.state.tid)}}>全部</div>
                          {
                              showCategoryList.map((item)=>{
                                  return(
-                                     <div activeStyle={{color:"#ff7919",borderBottom: "0.064rem solid #ff7919"}} className="search_nav_item swiper-slide" key={item.category_id} onClick={()=>{this.props.getShowList(this.state.tid,item.category_id,1)}}>{item.name}</div>
+                                     <div  className="search_nav_item swiper-slide" key={item.category_id} onClick={()=>{this.props.getShowList(this.state.tid,item.category_id,1)}}>{item.name}</div>
                                  )
                              })
                          }
                      </div>
                  </div>
-             </header>
+             </div>
                 <div className="content-wrap">
                     <div className="js-pre-hint"></div>
                     <div className="show-wrap">

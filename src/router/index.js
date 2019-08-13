@@ -18,9 +18,15 @@ export default [
         exact: true,
         context: "首页",
         component: Home,
+<<<<<<< HEAD
         className: "iconfont iconshouye",
         isShow: true,
         isok: true,
+=======
+        className:"iconfont iconshouye",
+        isShow:true,
+        isok:true,
+>>>>>>> 9bcf359b77d9c4d525c1ea89c1d0f8b4db1e2e8b
         meta: {
             title: "",
             Keywored: "",
@@ -32,6 +38,7 @@ export default [
         to: "/theatre",
         context: "剧院",
         component: Theatre,
+<<<<<<< HEAD
         isShow: true,
         isok: true,
         className: "iconfont icontheater",
@@ -119,6 +126,25 @@ export default [
         path:"/holder",
          context:"/票夹",
          component:Holder,
+=======
+        isShow:true,
+        className:"iconfont icontheater",
+        children:[{
+             path: "/theatre/",
+             to: "/theatre/",
+             exact:true,
+             context: "剧院",
+             component: TheatreList,
+         },
+         {
+             path:"/theatre/showList/:tid",
+             to:"/theatre/showList",
+             context:"演出信息",
+             component:ShowList,
+         }
+    
+      ]
+>>>>>>> 9bcf359b77d9c4d525c1ea89c1d0f8b4db1e2e8b
     },
     {
         path:"/reunion",
@@ -144,6 +170,20 @@ export default [
             }
         ]
     }
+<<<<<<< HEAD
 
+=======
+},{
+    path: "/search",
+    to: "/search",
+    context: "搜索",
+    component: Search,
+    meta: {
+        title: "",
+        Keywored: "",
+        description: "描述",
+    },
+}
+>>>>>>> 9bcf359b77d9c4d525c1ea89c1d0f8b4db1e2e8b
 
 ]

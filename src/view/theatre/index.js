@@ -5,7 +5,6 @@ import {
 
 export default class Theatre extends React.Component{
     render(){
-        //console.log(this.props.children,222222222222);
         return (
             <div>
                 {

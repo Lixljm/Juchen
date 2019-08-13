@@ -16,7 +16,6 @@ class List extends React.Component{
              <div>
                  {
                     this.props.listtype.map((v,i)=>{
-                        // console.log(typeof (i))
                          return <div id={"list_wrap"} key={i}>
                              <h2 className={"biaoti"}>{v.title}</h2>
                              {v.list?v.list.slice(0,1).map((v, i) => {

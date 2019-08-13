@@ -16,6 +16,7 @@
     font-weight: bold;
     color: #ff7919;
     border-bottom: 0.064rem solid #ff7919;
+    padding-bottom: 16px;
 }
 .search-top .search-nav .search_nav_wrap .search_nav{
     display: inline-block;

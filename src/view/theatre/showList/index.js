@@ -1,6 +1,7 @@
 import React from "react";
 import {
-    Route
+    Route,
+    Link
 } from "react-router-dom"
 import theater from "../../../store/actionCreato/theatre/index";
 import {connect} from "react-redux"
@@ -48,7 +49,7 @@ class ShowList extends React.Component{
                         {
                             showList.map((i)=>{
                                 return(
-                                    <div className="show-items" key={i.id}>
+                                    <Link className="show-items" key={i.id} to={"/ticket/"+i.id}>
                                         <div className="img-box">
                                             <img src={"https://image.juooo.com"+i.pic}/>
                                             <span className="logo_i ju_cheng"></span>
@@ -63,7 +64,7 @@ class ShowList extends React.Component{
                                                 <span className="fs24 mr8">起</span>
                                             </p>
                                         </div>
-                                    </div>
+                                    </Link>
                                 )
                             })
                         }

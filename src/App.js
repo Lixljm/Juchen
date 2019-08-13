@@ -14,6 +14,7 @@ import GraudRoute from "./router/GraudRoute"
 import Nav from "./router/Nav"
 import "lib-flexible"
 import Navlist from "./common/table"
+import Rouaa  from "../src/common/table"
 
 
 export default class App extends React.Component{
@@ -21,7 +22,7 @@ export default class App extends React.Component{
       return (
           <div className="App">
               <Router>
-                    <Navlist></Navlist>
+                  <Rouaa></Rouaa>
               </Router>
           </div>
       )

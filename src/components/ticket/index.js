@@ -2,36 +2,29 @@ import React from "react"
 import axios from "axios"
 import 'swiper/dist/css/swiper.min.css'
 import Swiper from "swiper"
-// import {logicalExpression} from "@babel/types";
-
-export default class ticket extends React.Component {
-    constructor() {
-        super();
+import {withRouter} from  "react-router-dom"
+import "../../style/yanchuxiangqing/index.scss"
+ class ticket extends React.Component {
+    constructor(props) {
+        super(props);
+        console.log(props)
         this.state = {
             detalList: [],
             cityList: {},
             tour_list: [],
-            bookList:[]
-
+            bookList:[],
+            show_id:""
 
     }}
 
     componentWillMount(){
-        axios.get("/juchengapi/Schedule/Schedule/getScheduleInfo?schedular_id=103174&version=6.0.3&referer=2", {
-            params: {
-                schedular_id: 103174
-            }
-        }).then((data) => {
+
+        axios.get("/juchengapi/Schedule/Schedule/getScheduleInfo?schedular_id="+this.props.match.params.id+"&version=6.0.3&referer=2").then((data) => {
             this.setState({
                 detalList: data.data
             })
         });
-        axios.get("/juchengapi/Schedule/Schedule/getTour?show_id=38383&venue_id=2824&version=6.0.3&referer=2", {
-            params: {
-                show_id: 38383
-            }
-
-        }).then((data) => {
+        axios.get("/juchengapi/Schedule/Schedule/getTour?show_id="+this.props.match.params.id+"&venue_id=2824&version=6.0.3&referer=2").then((data) => {
             this.setState({
                 cityList: data.data,
                 tour_list: data.data.tour_list,
@@ -44,11 +37,7 @@ export default class ticket extends React.Component {
             });
         });
 
-        axios.get("/jucheng/Search/getShowList?category=36&city_id=10055&version=6.0.3&referer=2", {
-            params: {
-                city_id:10055
-            }
-        }).then((data) => {
+        axios.get("/jucheng/Search/getShowList?category=36&city_id=36&version=6.0.3&referer=2").then((data) => {
             this.setState({
                 bookList: data.data,
             })
@@ -58,88 +47,87 @@ export default class ticket extends React.Component {
     }
 
     render() {
-        console.log(this.state.bookList.list,9999999999999)
-        return (
+        console.log(this.props.match.params.id,9999999999999)
 
-            this.state.detalList.share_data ?
-                <div className={"details"}>
-                    <header>
-                        <div className={"bj"}>
-                            <div className={"One"}>
-                                <span className={"icon iconfont iconzuojiantou"}></span>
-                                <p>演出详情</p>
-                                <i className={"icon iconfont iconxiaofangzi"}></i>
-                            </div>
-                            <div className={"book"}>
+        return(
+            this.state.detalList.share_data?
+            <div className={"Box"}>
+                <div className={"xtop"}>
+                    <div className={"xt1"}>
+                        <div className={"xt-first"}>
+                            <span>演出详情</span>
+                            <i className={"icon iconfont iconzuojiantou zuo"}></i>
+                            <i className={"icon iconfont iconxiaofangzi you"}></i>
+                        </div>
+                        <div className={"xt-second"}>
+                            <div className={"xt-s1"}>
                                 <img src={this.state.detalList.share_data.share_pic} alt=""/>
                             </div>
-                            <div className={"bookName"}>
-                                <div className={"name"}>{this.state.detalList.share_data.share_title}</div>
-                                <div className={"white"}></div>
-                                <div className={"price"}>{"￥" + this.state.detalList.static_data.price_range}</div>
-                            </div>
-                        </div>
-                    </header>
-
-
-                    <div className={"Data"}>
-                        <div className={"Day"}>
-                            <div className={"time"}>
-                                <div className={"time_child1"}>{this.state.detalList.item_list[0].project_time}</div>
-                                <div
-                                    className={"time_child2"}>{this.state.detalList.static_data.city.city_name}|{this.state.detalList.static_data.venue.venue_name}</div>
-                            </div>
-                            <div className={"position"}>
-                                <div className={"circular"}>
-                                    <div className={"icon iconfont icondingwei"}>
-                                    </div>
+                            <div className={"xt-s2"}>
+                                <div className={"s2-1"}>{this.state.detalList.share_data.share_title}</div>
+                                <div className={"s2-2"}>
+                                    <div className={"s2-2-2"}></div>
+                                </div>
+                                <div className={"s2-3"}>
+                                    <span className={"s2-3-1"}>{"￥" + this.state.detalList.static_data.price_range}</span>
                                 </div>
                             </div>
                         </div>
-                        <div className={"discount"}>
-                            <p className={"zz"}><img src="../../image/zvip.jpg" alt=""/></p>
+                    </div>
+                    <div className={"xt2"}>
+                        <div className={"xt2-1"}>
+                            <span className={"xt2-1-1"}>08/24</span>
+                            <span className={"xt2-1-2"}>周六</span>
+                            <i className={"icon iconfont iconyoujiantou"}></i>
+                        </div>
+                        <div className={"xt2-2"}>{this.state.detalList.static_data.city.city_name}|{this.state.detalList.static_data.venue.venue_name}</div>
+                        <div className={"xt2-3"}></div>
+                        <div className={"z-vip"}>
+                            <p className={"zz"}></p>
                             <div className={"zx"}>专享6折起</div>
                             <div className={"zg"}>最高省112元</div>
                             <div className={"kt"}>开通99/年</div>
                             <i className={"icon iconfont iconyoujiantou"}></i>
                         </div>
                     </div>
-                    <div className={"middle"}>
-                        <div className={"support"}>
-                            <span className={"sp3"}>开卡送</span>
-                            <span className={"sp3"}>：</span>
-                            <span className={"sp4"}>
+                </div>
 
-                        </span>
+                <div className={"show-benefit"}>
+                    <div className={"sh-b-1"}>
+                        <span>开卡送：</span>
+                        <a href="#">
                             <p>开通PLUS卡</p>
-                            <a href="#">送￥100尊享V+权益</a>
+                             <span>送￥100尊享V+权益</span>
                             <i className={"icon iconfont iconyoujiantou"}></i>
-                        </div>
-                        <div className={"tips"}>
-                            <span className={"sp1"}>入    场</span>
-                            <span className={"sp1"}>：</span>
-                            <div className={"sp2"}>{this.state.detalList.static_data.tips.desc}</div>
-                        </div>
-                        <div className={"ttt"}>
-                            <span className={"sp3"}>支    持</span>
-                            <span className={"sp3"}>：</span>
-                            <span className={"sp4"}>
-                            {this.state.detalList.static_data.support.list[0]}
-                                <span>|</span>
-                                {this.state.detalList.static_data.support.list[1]}
-                                <span>|</span>
-                                {this.state.detalList.static_data.support.list[2]}
-                        </span>
-                        </div>
-
+                        </a>
                     </div>
-                    <div className={"Tour"}>
-                        <div className={"tour_city"}>
-                            <p>巡演城市</p>
-                            <span>
-                                <span style={{color: "red"}}>{this.state.cityList.show_total}</span>场
-                            </span>
+                    <div className={"sh-line"}></div>
+
+                    <div className={"sh-b-2"}>
+                        <span>入场：</span>
+                        <p>{this.state.detalList.static_data.tips.desc}</p>
+                        <div className={"sh-b-line"}>
+                        </div>
+                    </div>
+                    <div className={"sh-b-3"}>
+                        <span>支持：</span>
+                        <p>{this.state.detalList.static_data.support.list[0]}</p>
+                        <div>|</div>
+                        <p>{this.state.detalList.static_data.support.list[1]}</p>
+                        <div>|</div>
+                        <p>{this.state.detalList.static_data.support.list[2]}</p>
+                    </div>
+                </div>
+
+                <div className={"tour-cities"}>
+                    <div >
+                        <div className={"tour-cities-1"}>
+                            <span className={"tc-title"}>巡演城市</span>
+                            <span className={"tc-city"}>
+                            <span className={"c-d-c"} style={{color:"red"}}>{this.state.cityList.show_total}</span>
+                            场
                             <i className={"icon iconfont iconyoujiantou"}></i>
+                        </span>
                         </div>
                         {/**********************  swiper  ************************/}
                         <div className={"tour_city_list"}>
@@ -147,7 +135,7 @@ export default class ticket extends React.Component {
                             <div className={"swiper-container"}>
                                 <div className={"swiper-wrapper"}>
                                     {
-                                       this.state.tour_list?this.state.tour_list.map((item, index) => {
+                                        this.state.tour_list?this.state.tour_list.map((item, index) => {
                                             return (
                                                 <div  key={item.id} className="swiper-slide">
                                                     <div className={"city"}>
@@ -165,41 +153,47 @@ export default class ticket extends React.Component {
                         </div>
                         {/********************************************************/}
                     </div>
-                    <div className={"wwhite"}></div>
-                    <div className={"introduce"}>
-                        <div className={"subtitle"}>演出介绍</div>
-                        <div className={"Scontent"}>{this.state.detalList.static_data.show_intro.desc}</div>
-                    </div>
-                    <div className={"recommend"}>
-                        <div className={"word"}>相关推荐</div>
+                    <div className={"tour-cities-2"}></div>
+                </div>
 
-                                    {
-                                        this.state.bookList? this.state.bookList.list.map((v,i)=>{
-                                    return <div className={"commond"} key={i}>
-                                                <div><div>
-                                          <div className={"book"}>
-                                              <img src={v.pic} alt=""/>
-                                          </div>
-                                          <div className={"bookName"}>
-                                              <div className={"name"}>{this.state.detalList.share_data.share_title}</div>
-                                              <div className={"white"}></div>
-                                              <div className={"price"}>{"￥" + this.state.detalList.static_data.price_range}</div>
-                                          </div>
-                                      </div>
-                                                </div>
+                <div className={"intro"}>
+                    <div className={"j-s"}>演出介绍</div>
+                    <div className={"nr"}  dangerouslySetInnerHTML={{__html:this.state.detalList.static_data.show_desc.desc}}></div>
+                </div>
+                <div className={"tips"}></div>
+
+                <div className={"recommend"}>
+                    <div className={"j-s"}>相关推荐</div>
+                    {
+                        this.state.bookList.list ? this.state.bookList.list.map((v, i) => {
+
+                            return <div className={"commond"} key={i}>
+                                <div className={"book"}>
+                                    <img src={v.pic} alt=""/>
+                                </div>
+                                <div className={"bookName"}>
+                                    <div className={"timmer"}>
+                                        <p>
+                                            {this.state.bookList.list[i].show_time_top}
+                                            <span>{this.state.bookList.list[i].show_time_bottom}</span>
+                                        </p>
                                     </div>
-                                  }):[]
-                                    }
-
+                                    <div className={"name"}>{this.state.bookList.list[i].name}</div>
+                                    <div className={"ct-name"}>
+                                        {this.state.bookList.list[i].city_name + "|" + this.state.bookList.list[i].venue_name}
+                                    </div>
+                                    <div
+                                        className={"price"}>{"￥" + this.state.bookList.list[i].min_price + "-" + this.state.bookList.list[i].max_price}</div>
+                                </div>
                             </div>
-
-
-
-
-                </div> : null
+                        }) : []
+                    }
+                </div>
+                <div className={"bottom-bar"}></div>
+            </div>:null
         )
-
     }
 
 
 }
+export default withRouter(ticket)

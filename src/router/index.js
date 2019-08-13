@@ -3,6 +3,7 @@ import Theatre from "../view/theatre"
 import Ticket from "../view/ticket"
 import User from "../view/user"
 import Search from "../view/search"
+import Vip from "../view/vip"
 export default [
     {
         path: "/",
@@ -12,6 +13,7 @@ export default [
         component: Home,
         className:"iconfont iconshouye",
         isShow:true,
+        isok:true,
         meta: {
             title: "",
             Keywored: "",
@@ -25,6 +27,7 @@ export default [
         component: Theatre,
         className:"iconfont icontheater",
         isShow:true,
+        isok:true,
         meta: {
             title: "",
             Keywored: "",
@@ -37,7 +40,7 @@ export default [
         context:"卡包",
         component:Ticket,
         className:"iconfont iconyouhui",
-        isShow:true,
+        isok:true,
         meta:{
             title:"",
             Keywored:"",
@@ -50,6 +53,7 @@ export default [
     component: User,
     className: "iconfont iconwode",
     isShow:true,
+        isok:true,
     meta: {
         title: "",
         Keywored: "",
@@ -66,6 +70,10 @@ export default [
         Keywored: "",
         description: "描述",
     }
-}
-
+},{
+    path:"/vip",
+    to:"/vip",
+    context:"vip",
+    component:Vip,
+    }
 ]

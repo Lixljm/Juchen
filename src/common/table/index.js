@@ -12,7 +12,6 @@ export default class Table extends React.Component{
     render(){
         return(
              <div>
-                 <Router>
                      {
                          router.map((v, i) => {
                              return (
@@ -21,8 +20,6 @@ export default class Table extends React.Component{
                              )
                          })
                      }
-                     <Navlist></Navlist>
-                 </Router>
              </div>
         )
     }

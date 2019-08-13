@@ -24,7 +24,10 @@ class Home extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            flage : false
+            flage : false,
+            index :1,
+            isFetching:true,
+            flag:true
         }
     }
     render(){
@@ -63,22 +66,46 @@ class Home extends React.Component{
             <List></List>
             <Hotvenue></Hotvenue>
             <Loding></Loding>
+                <div ref={"wrapper"}>
+
+                       <div style={{height:"100px",fontSize:"20px"}}>加载中....</div>:<p>没有更多了</p>
+                    
+                </div>
             </div>
         )
     }
     componentDidMount(){
         this.props.getPiclist();
-       window.addEventListener('scroll', ()=>{
-            if(window.scrollY>0){
-            this.setState({
-                flage:true 
-            })
-        }else{
-            this.setState({
-                flage:false 
-            })
-        }
-       });	
+
+        const wrapper =this.refs.wrapper;
+        window.addEventListener('scroll',()=>{
+            const scrollTop = wrapper.getBoundingClientRect().top;
+            const windowHeight = window.screen.height;
+            // console.log(scrollTop && scrollTop < windowHeight)
+            // console.log(scrollTop - windowHeight)
+            if (scrollTop && scrollTop < windowHeight) {
+                this.setState({
+                    flag: true
+                })
+            } else {
+                this.setState({
+                    flag: false
+                })
+            }
+            // },0)
+            if (this.state.flag) {
+                this.handleClick()
+            }
+        },false)
+
       }
+    handleClick() {
+        console.log(this.state.index)
+        this.props.getLoging(this.state.index);
+
+        this.setState({
+            index: this.state.index+=1,
+        });
+    }
 }
 export default connect((state)=>({picLIsr:state.home.picLIsr}),(dispatch)=>bindActionCreators(getlunbo,dispatch))(Home)

@@ -2,6 +2,9 @@ import React from "react"
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import memberShip from "../../../store/actionCreato/home"
+import {
+    BrowserRouter as Route,
+    Link ,} from "react-router-dom"
 import '../../../style/home/membership.scss'
 class Membership extends React.Component{
     render(){
@@ -19,9 +22,10 @@ class Membership extends React.Component{
                     <ul>
                         {
                            this.props.membershipList.discountList?this.props.membershipList.discountList.map((v,i)=>{
-                               return <li key={i}>
-                                        <img src={v.pic} alt=""/>
+                               return  <li key={i}>
+                                <Link to={"/vip"}>  <img src={v.pic} alt=""/>
                                         <p>{v.min_discount} <i>折</i></p>
+                                </Link>
                                      </li>
                            }):[]
                         }
@@ -34,10 +38,11 @@ class Membership extends React.Component{
                 <ul>
                     {
                         this.props.membershipList.watchList?this.props.membershipList.watchList.map((v,i)=>{
-                                return <li key={i}>
-                                    <img src={v.pic} alt=""></img>
+                                return  <li key={i}>
+                                     <img src={v.pic} alt=""></img>
                                     <p>￥0<i>￥100</i> </p>
                                 </li>
+
                         }):[]
                     }
                 </ul>

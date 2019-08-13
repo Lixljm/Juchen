@@ -13,7 +13,6 @@ const upShowList=function (payload) {
     }
 }
 const upshowCategoryList=function (payload) {
-    //console.log(payload)
     return{
         type:theaterTypeList.GET_SHOW_CATEGPRY_LIST,
         payload,
@@ -30,7 +29,6 @@ export default {
          return async (dispatch)=>{
              const {datas}=await axios.get("https://m.juooo.com/Theatre/showListData?tid="+tid+"&category="+category+"&page="+page);
              dispatch(upShowList(datas))
-            // console.log(datas,20000)
 
          }
       },
@@ -38,7 +36,6 @@ export default {
          return async (dispatch)=>{
              const {data}=await axios.get("https://m.juooo.com/Search/getShowCategory?version=6.0.3&referer=2")
              dispatch(upshowCategoryList(data.show_category_list))
-             //console.log(data.show_category_list,100000000)
          }
     }
 }

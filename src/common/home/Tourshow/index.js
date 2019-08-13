@@ -5,6 +5,7 @@ import {connect} from 'react-redux'
 import tourAction from '../../../store/actionCreato/home'
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
+import {withRouter} from 'react-router-dom'
 class Tourshow extends React.Component{
     render(){
         return(
@@ -18,7 +19,7 @@ class Tourshow extends React.Component{
                         {
                          this.props.tourshowList.slice(0,6).map((v,i)=>{
                               return(
-                                    <div key={i} className="swiper-slide tour-head-c">
+                                    <div onClick={()=>this.props.history.push("/search")} key={i} className="swiper-slide tour-head-c">
                                     <img src={v.pic} alt=""/>
                                     <h3>{v.show_name}</h3>
                                     <p>{v.schedular_num}场巡演</p>
@@ -44,4 +45,4 @@ class Tourshow extends React.Component{
         
     }
 }
-export default connect((state)=>({tourshowList:state.home.tourshowList}),(dispatch)=>bindActionCreators(tourAction,dispatch))(Tourshow) 
+export default withRouter(connect((state)=>({tourshowList:state.home.tourshowList}),(dispatch)=>bindActionCreators(tourAction,dispatch))(Tourshow))

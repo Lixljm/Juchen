@@ -1,5 +1,6 @@
 import React from "react"
-export default class TopNav extends React.Component{
+import {withRouter} from "react-router-dom"
+class TopNav extends React.Component{
     constructor(props){
         super(props);
         this.state={
@@ -7,14 +8,13 @@ export default class TopNav extends React.Component{
         }
     }
      render(){
-         // console.log(222232453546456575,this.state.topnav)
          return(
              <div>
                  <div  id={"topnav"}>
                      <ul>
                      {this.state.topnav?
                          this.state.topnav.map((v,i)=>{
-                            return <div key={i}>
+                            return <div key={i} onClick={()=>this.props.history.push("/show")}>
                                  <li ><i><img src={v.pic} alt=""/></i><span>{v.name}</span></li>
                             </div>
                      }):null
@@ -32,3 +32,5 @@ export default class TopNav extends React.Component{
         }
     }
 }
+
+export default withRouter(TopNav)

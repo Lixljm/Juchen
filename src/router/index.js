@@ -5,6 +5,8 @@ import User from "../view/user"
 import Search from "../view/search"
 import TheatreList  from "../view/theatre/theaterList"
 import ShowList from "../view/theatre/showList"
+import Calendar from "../view/calendar"
+import Show from "../view/show"
 export default [
     {
         path: "/",
@@ -84,6 +86,16 @@ export default [
         Keywored: "",
         description: "描述",
     },
+},{
+    path:"/calendar",
+    to:"/calendar",
+    context:"演出日历",
+    component:Calendar,
+},{
+    path:"/show",
+    to:"/show",
+    context:"演出",
+    component:Show,
 }
 
 ]

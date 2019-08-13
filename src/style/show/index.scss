@@ -1,0 +1,115 @@
+.show_da{
+    width: 100%;
+    padding-top: 98.75px;
+    box-sizing: border-box;
+    .header_top{
+        width: 100%;
+        height: 48.56px;
+        font-size: 19.872px;
+        border-bottom:#ccc 1px solid;
+        display: flex;
+        line-height: 48.56px;
+        justify-content: space-between;
+        position: fixed;
+        background: #fff;
+        top: 0;
+        i{
+            font-size: 19.872px;
+           
+        }
+        
+    }
+    .nav_n{
+        width: 100%;
+        height: 50.19px;
+        position: relative;
+        position: fixed;
+        background: #fff;
+        top: 48.56px;
+       ul{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: auto; 
+        margin-right:100px; 
+        padding: 11px 0 11px 16px;
+        li{
+            font-size: 16.56px;
+            flex-shrink: 0;
+            padding:0 5.519px;
+            color:#232323;
+            margin-right: 16.56px;
+        }
+        .nav_n_r{
+            position: absolute;
+            right: 0;
+            background: #fff;
+            font-size: 16.56px;
+            padding: 0 16px;
+            border-left: #ccc 1px solid;
+            i{
+                font-size: 16.5px;
+            }
+        }
+         
+    }
+}
+.show_conten{
+    width: 100%;
+    ul{
+        padding: 0 10px;
+        li{
+            display: flex;
+            .show_conten_left{
+                img{
+                    width: 121.44px;
+                    height: 165.59px;
+                }
+            }
+            .show_conten_right{
+                width: 240.92px;
+                height: 167.59px;
+                text-align: left;
+                margin-left:16.56px; 
+                .show_conten_right_a{
+                    color: #666666;
+                    font-size: 13.248px;
+                    strong{
+                        color: #232323;
+                        font-size: 17.6641px;
+                        font-weight: bolder;
+                    }
+                }
+                .show_conten_right_b{
+                    color: #232323;
+                    font-size: 18.7679px;
+                    font-weight: bolder;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    margin-top: 13.8px;
+                }
+                .show_conten_right_c{
+                    color: #666666;
+                    font-size: 13.248px;
+                    margin-top: 13.8px;
+                }
+                .show_conten_right_d{
+                    color: #999999;
+                    font-size: 12.1439px;
+                    margin-top: 11px;
+                    strong{
+                        color: #ff6743;
+                        font-size: 12.1439px;
+                        font-weight: bold;
+                    }
+                    
+                }
+            }
+        }
+    }
+
+}
+    
+}

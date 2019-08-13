@@ -48,8 +48,6 @@ import "../../style/search/index.scss"
                                                 <p className="search_right_fo"> <span>￥{item.min_price}</span> 起  </p>
                                             </div>
                                         </li> 
-                           
-                               
                                 }) 
                             }
                         </ul>

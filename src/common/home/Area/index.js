@@ -2,6 +2,7 @@ import React from "react";
 import '../../../style/home/area.scss'
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
+import {withRouter} from 'react-router-dom'
 import actionArea from '../../../store/actionCreato/home'
 
  class Area extends React.Component{
@@ -28,7 +29,7 @@ import actionArea from '../../../store/actionCreato/home'
                         <p dangerouslySetInnerHTML={{__html:this.props.operation_list[2].describe}}></p>
                         <img src={this.props.operation_list[2].pic} alt=""></img>
                     </div>
-                    <div>
+                    <div onClick={()=>this.props.history.push("/calendar")}>
                         <h3>{this.props.operation_list[3].name}</h3>
                         <p dangerouslySetInnerHTML={{__html:this.props.operation_list[3].describe}}></p>
                         <img src={this.props.operation_list[3].pic } alt=""></img>
@@ -48,4 +49,4 @@ import actionArea from '../../../store/actionCreato/home'
         this.props.getOperationList()
     }
 }
-export default connect((state)=>({operation_list:state.home.operation_list}),(dispatch)=>bindActionCreators(actionArea,dispatch))(Area)
+export default withRouter(connect((state)=>({operation_list:state.home.operation_list}),(dispatch)=>bindActionCreators(actionArea,dispatch))(Area)) 

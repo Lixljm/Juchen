@@ -1,11 +1,14 @@
 import React from "react"
 import "../../image/bj.jpg"
+import 'antd/dist/antd.css';
 import {
+    Link,
     BrowserRouter as Router,
     Route,
     withRouter
 } from "react-router-dom"
 import "../../style/ticket/index.scss"
+import Myphone from "../../components/kefuhelp"
 
 
  class User extends React.Component{
@@ -24,22 +27,22 @@ import "../../style/ticket/index.scss"
                             <p>普通会员</p>
                         </div>
                         <div className={"lower"}>
-                            <a >
+                            <Link >
                                 <p className={"ps"}>0</p>
                                 <p className={"px"}>账户余额</p>
-                            </a>
-                            <a href="#">
+                            </Link>
+                            <Link >
                                 <p className={"ps"}>18</p>
                                 <p className={"px"}>积分</p>
-                            </a>
-                            <a href="#">
+                            </Link>
+                            <Link>
                                 <p className={"ps"}>0</p>
                                 <p className={"px"}>优惠券</p>
-                            </a>
-                            <a href="#">
+                            </Link>
+                            <Link>
                                 <p className={"pss"}>立即开通</p>
                                 <p className={"px"}>橙PLUS卡</p>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -48,48 +51,48 @@ import "../../style/ticket/index.scss"
                 <div className={"menu"}>
                     <ul className={"first"}>
                         <li>
-                            <a href="#" onClick={()=>{this.props.history.push("/Order")}}>
+                            <Link  onClick={()=>{this.props.history.push("/Order")}}>
                                 <i className={"icon iconfont icondingdan"}></i>
                                 <p>我的订单</p>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="" className={"icon"} onClick={()=>{this.props.history.push("/Holder")}}>
+                            <Link className={"icon"} onClick={()=>{this.props.history.push("/Holder")}}>
                                 <i className={"icon iconfont iconyouhui"}></i>
                                 <p>我的票夹</p>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="" className={"icon"} onClick={()=>{this.props.history.push("/Reunion")}}>
+                            <Link  className={"icon"} onClick={()=>{this.props.history.push("/Reunion")}}>
                                 <i className={"icon iconfont iconqiapian"}></i>
                                 <p>我的卡包</p>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <ul className={"first"}>
                         <li>
-                            <a href="" className={"icon"}>
+                            <Link  className={"icon"}>
                                 <i className={"icon iconfont iconcontacts"}></i>
                                 <p>实名购票人</p>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="" className={"icon"}>
+                            <Link  className={"icon"}>
                                 <i className={" icon iconfont icondizhi"}></i>
                                 <p>收货地址</p>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="" className={"icon"}>
+                            <Link  className={"icon"}>
                                 <i className={"icon iconfont iconicon-test"}></i>
                                 <p>意见反馈</p>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="" className={"icon"}>
+                            <Link className={"icon"}>
                                 <i className={"icon iconfont iconkefu"} style={{fontsize:"40px"}}></i>
-                                <p>客服帮助</p>
-                            </a>
+                            </Link>
+                            <Myphone></Myphone>
                         </li>
                     </ul>
                 </div>

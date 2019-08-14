@@ -13,7 +13,8 @@ import "../../style/yanchuxiangqing/index.scss"
             cityList: {},
             tour_list: [],
             bookList:[],
-            show_id:""
+            show_id:"",
+            isHid:true
 
     }}
 
@@ -24,7 +25,7 @@ import "../../style/yanchuxiangqing/index.scss"
                 detalList: data.data
             })
         });
-        axios.get("/juchengapi/Schedule/Schedule/getTour?show_id="+this.props.match.params.id+"&venue_id=2824&version=6.0.3&referer=2").then((data) => {
+        axios.get("/juchengapi/Schedule/Schedule/getTour?show_id=30374&venue_id=2824&version=6.0.3&referer=2").then((data) => {
             this.setState({
                 cityList: data.data,
                 tour_list: data.data.tour_list,
@@ -43,11 +44,11 @@ import "../../style/yanchuxiangqing/index.scss"
             })
         });
 
-
     }
 
+8
+
     render() {
-        console.log(this.props.match.params.id,9999999999999)
 
         return(
             this.state.detalList.share_data?
@@ -57,7 +58,7 @@ import "../../style/yanchuxiangqing/index.scss"
                         <div className={"xt-first"}>
                             <span>演出详情</span>
                             <i className={"icon iconfont iconzuojiantou zuo"} ></i>
-                            <i className={"icon iconfont iconxiaofangzi you"}></i>
+                            <i className={"icon iconfont iconxiaofangzi you"} onClick={()=>this.props.history.push("/")}></i>
                         </div>
                         <div className={"xt-second"}>
                             <div className={"xt-s1"}>
@@ -156,10 +157,18 @@ import "../../style/yanchuxiangqing/index.scss"
                     <div className={"tour-cities-2"}></div>
                 </div>
 
-                <div className={"intro"}>
+                <div className={"intro"} style={{height:this.state.isHid?"600px":"100%"}}>
                     <div className={"j-s"}>演出介绍</div>
                     <div className={"nr"}  dangerouslySetInnerHTML={{__html:this.state.detalList.static_data.show_desc.desc}}></div>
+                    <div className={"xxbtn"} onClick={()=>{this.setState({isHid:false})}} style={{display:this.state.isHid?"block":"none"}}>展开更多</div>
                 </div>
+
+
+
+
+
+
+
                 <div className={"tips"}></div>
 
                 <div className={"recommend"}>

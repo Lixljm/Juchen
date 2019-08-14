@@ -37,7 +37,7 @@ export default [
     {
         path:"/ticket",
         to:"/ticket",
-        context:"卡包",
+        context:"票夹",
         component:Ticket,
         className:"iconfont iconyouhui",
         isok:true,

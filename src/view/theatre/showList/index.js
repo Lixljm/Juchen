@@ -49,7 +49,7 @@ class ShowList extends React.Component{
                         {
                             showList.map((i)=>{
                                 return(
-                                    <Link className="show-items" key={i.id} to={"/ticket/"+i.id}>
+                                    <Link className="show-items" key={i.id} to={"/Wticket/"+i.id}>
                                         <div className="img-box">
                                             <img src={"https://image.juooo.com"+i.pic}/>
                                             <span className="logo_i ju_cheng"></span>

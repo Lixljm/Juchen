@@ -56,7 +56,7 @@ import "../../style/yanchuxiangqing/index.scss"
                     <div className={"xt1"}>
                         <div className={"xt-first"}>
                             <span>演出详情</span>
-                            <i className={"icon iconfont iconzuojiantou zuo"}></i>
+                            <i className={"icon iconfont iconzuojiantou zuo"} ></i>
                             <i className={"icon iconfont iconxiaofangzi you"}></i>
                         </div>
                         <div className={"xt-second"}>

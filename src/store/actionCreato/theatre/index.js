@@ -1,4 +1,4 @@
-Rimport theaterTypeList from "../../actionType/theatre";
+import theaterTypeList from "../../actionType/theatre";
 import axios from "axios";
  const uptheaterList= function(payload){
     return{

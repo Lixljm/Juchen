@@ -12,7 +12,7 @@ export default class Table extends React.Component{
     render(){
         return(
              <div>
-                 <Router>
+
                      {
                          router.map((v, i) => {
                              return (
@@ -21,11 +21,7 @@ export default class Table extends React.Component{
                              )
                          })
                      }
-<<<<<<< HEAD
 
-=======
->>>>>>> 9bcf359b77d9c4d525c1ea89c1d0f8b4db1e2e8b
-                 </Router>
              </div>
         )
     }

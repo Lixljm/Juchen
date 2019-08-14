@@ -95,11 +95,11 @@ export default{
             // console.log("2qwddqd",data.data)
         }
   },
-  getLoging(){
+  getLoging(index=1){
         return async (dispatch)=>{
-            const data = await axios.get("/juchengapi/home/index/getRecommendShow?cityAdd=&page=1&version=6.0.3&referer=2")
+            const data = await axios.get("/juchengapi/home/index/getRecommendShow?cityAdd=&page="+index+"&version=6.0.3&referer=2")
              console.log('dddddd',data)
-            dispatch(GetLoding(data.data))
+            dispatch(GetLoding(data.data.recommend_show_list))
         }
   }
 

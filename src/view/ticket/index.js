@@ -7,13 +7,7 @@ export default class Ticket extends React.Component{
     render(){
         return(
             <div>
-                {/*{*/}
-                    {/*this.props.children.map((v,i)=>{*/}
-                        {/*return (*/}
-                            {/*<Route key={i} {...v}></Route>*/}
-                        {/*)*/}
-                    {/*})*/}
-                {/*}*/}
+
             </div>
         )
     }

@@ -17,7 +17,8 @@ import homeType from "../../actionType/home"
     }else if(type === homeType.GET_LIST){
         state.listtype = payload;
     }else if(type === homeType.GET_LODINGLIST){
-        state.loginglist = payload;
+         console.log(state.loginglist)
+        state.loginglist = [...state.loginglist,...payload];
     }else if(type === homeType.GET_PIC){
         state.picLIsr=payload;
     }

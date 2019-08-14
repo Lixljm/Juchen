@@ -12,7 +12,6 @@ export default class Table extends React.Component{
     render(){
         return(
              <div>
-
                      {
                          router.map((v, i) => {
                              return (

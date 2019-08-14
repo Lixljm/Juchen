@@ -6,8 +6,8 @@ import {
 import Navlist from "./Nav"
 
 export  default class GraudRoute extends React.Component{
+
     render(){
-        console.log(this.props)
         return(
             <div>
 
@@ -15,8 +15,6 @@ export  default class GraudRoute extends React.Component{
                 {
                     this.props.isok? <Navlist></Navlist>:null
                 }
-
-
             </div>
         )
     }

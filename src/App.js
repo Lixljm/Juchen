@@ -23,24 +23,13 @@ import Navlist from "./common/table"
 import Rouaa from "../src/common/table"
 import "./style/trans.scss"
 
+import Navtab from './common/table'
 
-// export default class App extends React.Component{
-//     render(){
-//
-//         return (
-//             <div className="App">
-//                 <Router>
-//                     <Rouaa></Rouaa>
-//                     {/*<Navlist></Navlist>*/}
-//                 </Router>
-//             </div>
-//         )
-//     }
-// }
 const ANIMATION_MAP = {
-    PUSH:"forward",
-    POP :"back",
+    PUSH: "forward",
+    POP: "back",
 }
+
 const Routes  = withRouter(({location,history})=>{
  return(
      <TransitionGroup

@@ -1,5 +1,6 @@
 import React from "react"
-export default class TopNav extends React.Component{
+import {withRouter,Link} from "react-router-dom"
+class TopNav extends React.Component{
     constructor(props){
         super(props);
         this.state={
@@ -15,7 +16,7 @@ export default class TopNav extends React.Component{
                      {this.state.topnav?
                          this.state.topnav.map((v,i)=>{
                             return <div key={i}>
-                                 <li ><i><img src={v.pic} alt=""/></i><span>{v.name}</span></li>
+                                <Link to={"/show"}>  <li ><i><img src={v.pic} alt=""/></i><span>{v.name}</span></li></Link>
                             </div>
                      }):null
                      }
@@ -32,3 +33,4 @@ export default class TopNav extends React.Component{
         }
     }
 }
+export default withRouter(TopNav);

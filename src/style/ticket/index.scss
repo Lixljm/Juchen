@@ -1,0 +1,159 @@
+.box {
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+
+  .header {
+    width: 100%;
+    height: 210px;
+    background: url("../../image/bj.jpg") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header > i {
+    font-size: 20px;
+    color: #fefefe;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  .bigger {
+    width: 93%;
+    height: 170px;
+    background: #ffffff;
+    //margin: 0 auto;
+    margin: 60px 0.4rem 0;
+    border-radius: 0.10667rem;
+  }
+
+  .upper {
+    padding: 0 0.4rem;
+    position: relative;
+    text-align: left;
+  }
+
+  .middle {
+    margin-top: 0.09333rem;
+    overflow: hidden;
+  }
+
+  .lower {
+    display: flex;
+    align-items: center;
+  }
+
+  .photo {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    margin-top: -15px;
+    margin-right: 0.26667rem;
+    display: inline-block;
+    background: #f5f5f5;
+    overflow: hidden;
+  }
+
+  .sp1 {
+    position: absolute;
+    top: 10px;
+    color: #232323;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .sp2 {
+    position: absolute;
+    color: #999999;
+    font-size: 12px;
+    bottom: 0px;
+  }
+
+  .middle {
+    width: 100%;
+    height: 26px;
+  }
+
+  .middle > p {
+    float: right;
+    font-size: 14px;
+    color: #454341;
+    font-weight: bold;
+    background: linear-gradient(-45deg, #f5dea9, #f8d583);
+    padding: 4px 8px 4px 12px;
+    border-radius: 16px 0 0 16px;
+  }
+
+  .lower {
+    display: flex;
+    align-items: center;
+  }
+.lower a{
+
+}
+  .lower .px {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    color: #666666;
+    font-weight: bold;
+    font-size: 0.32rem;
+    padding: 6px 20px;
+  }
+
+  .lower .ps {
+    color: #ff6743;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .lower .pss {
+    color: #232323;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .mine-vip{
+    width: 100%;
+    height: 77px;
+    display: block;
+    color: #232323;
+    background: url("../../image/VIP.png") no-repeat;
+    background-size: 100%;
+  }
+  .menu{
+    padding: 14px;
+  }
+  .first{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 0.05333rem 0.4rem 0.02667rem rgba(35,35,35,.08);
+  }
+  .first li{
+    width: 25%;
+    text-align: center;
+    padding: 20px 0 20px;
+    color: #666666;
+  }
+  .menu ul i{
+    font-size: 36px;
+    color: #000;
+  }
+  .menu ul p {
+    font-size: 12px;
+    color: #232323;
+  }
+}
+.surplus{
+  width: 100%;
+  height: 130px;
+}
+.tutu{
+  margin-bottom: 345px;
+}

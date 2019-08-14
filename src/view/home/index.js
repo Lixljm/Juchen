@@ -1,7 +1,7 @@
 import React from "react"
 import "../../style/home/index.scss"
 import { 
-    Link
+    withRouter
 } from 'react-router-dom'
 import Area from "../../common/home/Area"
 import Tourshow from "../../common/home/Tourshow"
@@ -9,8 +9,8 @@ import Membership from "../../common/home/Membership"
 import Hotvenue from "../../common/home/Hotvenue"
 import Banner from "../../common/home/lunbo"
 import "../../style/home.scss"
-import getlunbo from "../../store/actionCreato/home";
-import TopNav from "../../common/home/Topnav";
+import getlunbo from "../../store/actionCreato/home"
+import TopNav from "../../common/home/Topnav"
 import Hotshow from "../../common/home/hotshow"
 import List from "../../common/home/List"
 import Loding from  "../../common/home/Loading"
@@ -33,15 +33,15 @@ class Home extends React.Component{
     render(){
         return(
             <div>
-              
-
             <div className="head" style={{background : this.state.flage?'#fff':'rgba(0 0 0 0.1)'}} ref={"homConatiner"}>
-               <div className={"head-left"}><strong>o</strong> <span>全国</span></div> 
-               <Link to={"/search"}><div className="head-center">搜索热门演出</div></Link> 
-                <span className={"head-right"}><img style={{width:"30px",height:"30px"}} src="https://image.juooo.com/group1/M00/02/65/rAoKmVyvD7iAHJX4AAADmpmoUeI150.png"></img></span>
+               <div className={"head-left"}><strong></strong> <span>全国</span></div> 
+               <div onClick={()=> this.props.history.push("/search")} className="head-center">搜索热门演出</div>
+                <span className={"head-right"}><img style={{width:"30px",height:"30px"}} alt="" src="https://image.juooo.com/group1/M00/02/65/rAoKmVyvD7iAHJX4AAADmpmoUeI150.png"></img></span>
             </div>
+                <div>
             <Banner a={this.props.picLIsr}></Banner>
             <TopNav b={this.props.picLIsr}></TopNav>
+                </div>
             <div  id={"youxian"}>
                     <div  className={"goupiao"}>
                         <div className={"top"}>
@@ -108,4 +108,5 @@ class Home extends React.Component{
         });
     }
 }
-export default connect((state)=>({picLIsr:state.home.picLIsr}),(dispatch)=>bindActionCreators(getlunbo,dispatch))(Home)
+export default withRouter(connect((state)=>({picLIsr:state.home.picLIsr}),(dispatch)=>bindActionCreators(getlunbo,dispatch))(Home)) 
+

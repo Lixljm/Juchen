@@ -5,11 +5,13 @@ class Chouti extends React.Component{
       state={
           open:false,
           zIndex:10,
+          display:"none",
       }
     onOpenChange = (...args) => {
         console.log(args);
       this.setState({
-         zIndex:9999999
+         zIndex:99,
+          display:"block"
       });
         this.setState({ open: !this.state.open });
     }
@@ -32,8 +34,9 @@ class Chouti extends React.Component{
                 <NavBar className={"tabl"} onLeftClick={this.onOpenChange}>筛选</NavBar>
                 <Drawer
                     // width={"100px"}
+
                     className="my-drawer"
-                    style={{ minHeight: document.documentElement.clientHeight,zIndex:this.state.zIndex}}
+                    style={{ minHeight: document.documentElement.clientHeight,zIndex:this.state.zIndex,display:this.state.display}}
                     position={"right"}
                     enableDragHandle
                     contentStyle={{ color: '#A6A6A6', textAlign: 'center', paddingTop:100  }}

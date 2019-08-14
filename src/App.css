@@ -22,9 +22,7 @@
 .App-link {
   color: #61dafb;
 }
-.active{
-  background:"orange"
-}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -73,3 +71,4 @@
   transform: scale(0);
   transition: 800ms ease-out;
 }
+

@@ -3,6 +3,10 @@ import  Swiper  from "swiper"
 import "swiper/dist/css/swiper.min.css"
 import "../../../style/home/hotshow.scss"
 import {
+    Link,
+    withRouter
+} from "react-router-dom"
+import {
     connect
 } from "react-redux"
 import {
@@ -11,7 +15,7 @@ import {
 import gethotshow from "../../../store/actionCreato/home"
 class Hotshow extends React.Component{
      render(){
-
+    console.log("wdw",this.props.hotlists)
          return(
              <div className={"lb2"}>
                  <h2 className={"title"}>热门演出</h2>
@@ -19,10 +23,11 @@ class Hotshow extends React.Component{
                  <div className={"swiper-wrapper hostType topok"}>
 
                  {this.props.hotlists? this.props.hotlists.map((v,i)=>{
-                         return (<div key={i} className={"swiper-slide hotlist"}>
-                             <img src={v.pic} alt=""/>
-                             <p className={"wenben"}>{v.show_name}</p>
-                         </div>)
+                     const art = v.schedular_url.replace("https://m.juooo.com/ticket/","")
+                     return(<div key={i} className={"swiper-slide hotlist"}onClick={()=>{this.props.history.push("/Wticket/"+art)}}>
+                 <img src={v.pic} alt=""/>
+                         <p className={"wenben"}>{v.show_name}</p>
+                 </div>)
                  }):null
                  }
                  </div>
@@ -42,5 +47,5 @@ class Hotshow extends React.Component{
 
      }
 }
-export default connect((state)=>({hotshow:state.home.hotshow,
-hotlists:state.home.hotlists}),(dispatch)=>bindActionCreators(gethotshow,dispatch))(Hotshow)
+export default withRouter(connect((state)=>({hotshow:state.home.hotshow,
+hotlists:state.home.hotlists}),(dispatch)=>bindActionCreators(gethotshow,dispatch))(Hotshow))

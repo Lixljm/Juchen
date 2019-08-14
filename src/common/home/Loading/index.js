@@ -5,6 +5,9 @@ import {
     connect
 }  from "react-redux"
 import {
+    withRouter
+}  from "react-router-dom"
+import {
     bindActionCreators
 } from "redux"
 
@@ -22,7 +25,7 @@ class Loding extends React.Component{
             <div>
                 {
                     this.props.loginglist?this.props.loginglist.map((v,i)=>{
-                        return (<div className={"loding"} key={i}>
+                        return (<div className={"loding"} key={i} onClick={()=>this.props.history.push("/Wticket/"+v.sche_id)}>
                             <img src={v.schePic} alt=""/>
                             <div className={"lodingList"}>
                                 <span style={{fontWeight:900}}>{v.show_time}<i>{v.week}</i></span>
@@ -43,4 +46,4 @@ class Loding extends React.Component{
 
 
 }
-export default connect((state)=>({loginglist:state.home.loginglist}),(dispatch)=>bindActionCreators(getLoding,dispatch))(Loding)
+export default withRouter(connect((state)=>({loginglist:state.home.loginglist}),(dispatch)=>bindActionCreators(getLoding,dispatch))(Loding))

@@ -1,0 +1,24 @@
+.headerr {
+  width: 100%;
+  height: 100%;
+  font-size: 12px; }
+  .headerr .data {
+    padding-top: 48px;
+    position: relative; }
+    .headerr .data .section {
+      position: fixed;
+      top: 0px;
+      z-index: 100;
+      width: 100%;
+      height: 48px;
+      background: lightseagreen;
+      font-size: 32px;
+      color: #232323;
+      display: flex;
+      line-height: 48px; }
+    .headerr .data .section i {
+      flex: 0.5; }
+    .headerr .data .section > span {
+      flex: 2; }
+
+/*# sourceMappingURL=index.css.map */

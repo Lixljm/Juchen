@@ -38,7 +38,7 @@ export default class Lunbo extends React.Component{
     }
 
     componentWillReceiveProps(nextProps){
-        if(nextProps.a!=this.props.a){
+        if(nextProps.a!== this.props.a){
             this.setState({
                 slideList:nextProps.a.slide_list
             });

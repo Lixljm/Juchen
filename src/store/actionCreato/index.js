@@ -5,6 +5,7 @@ import user from "./user"
 import search from "./search"
 import vip from "./vip"
 
+
 export default {
     ...home,
     ...theatre,

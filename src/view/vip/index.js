@@ -47,7 +47,7 @@ import {
                                   })
                               }
                           </div>
-                          <div className={"shaixuan"}>
+                          <div className={"shaixuan"} style={{zIndex:19}}>
                               <Chouti></Chouti>
                           </div>
                       </div>
@@ -55,7 +55,7 @@ import {
                   </div>
                     {
                         this.state.list? this.state.list.map((v,i)=>(
-                            <div>
+                            <div key={i} onClick={()=>this.props.history.push("/Wticket/"+v.id)} style={{zIndex:101010010101010101010}}>
                                 <div className={"xiangl"}>
                             <img src={v.pic} alt=""/>
                             <div className={"xianqi"}>
